@@ -1,6 +1,7 @@
 import numpy as np
 from courselib.models.base import TrainableModel
 from courselib.utils.functions import sigmoid
+import sys
 
 class LogisticRegression(TrainableModel):
     """
@@ -26,11 +27,13 @@ class LogisticRegression(TrainableModel):
         grad_w = X.T @ residual / len(X)
         grad_b = np.array([np.mean(residual)])
 
-
         if self.penalty == "ridge":
             grad_w += self.lam * self.w
         elif self.penalty == "lasso":
             grad_w += self.lam * np.sign(self.w)
+
+        # Debug: show mean of gradients
+        # sys.stdout.write(f"grad_w mean: {np.mean(grad_w):.6f}, grad_b: {grad_b[0]:.6f}")
 
         return {"w": grad_w, "b": grad_b}
 

@@ -40,5 +40,5 @@ class GDOptimizer(Optimizer):
             self.learning_rate = self.schedule_fn(self.step)
 
         for key in params:
-            params[key] = params[key] - self.learning_rate * grads[key]
+            params[key][...] -= self.learning_rate * grads[key]
 
