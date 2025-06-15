@@ -28,6 +28,9 @@ class DecisionTree(TrainableModel):
         self.min_samples_split = min_samples_split
         self.criterion = criterion
         self.root = None
+    
+    def __call__(self, X):
+        return self.predict(X)
 
     def fit(self, X, y):
         self.root = self._grow_tree(X, y)

@@ -21,6 +21,9 @@ class RandomForest(TrainableModel):
         self.criterion = criterion
         self.trees = []
         self.n_classes = None
+    
+    def __call__(self, X):
+        return self.predict(X)
 
     def fit(self, X, y):
         self.n_classes = len(np.unique(y))

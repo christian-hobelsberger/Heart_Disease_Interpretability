@@ -42,3 +42,22 @@ class GDOptimizer(Optimizer):
         for key in params:
             params[key][...] -= self.learning_rate * grads[key]
 
+class MomentumOptimizer(Optimizer):
+    """
+    Gradient descent with momentum.
+
+    Parameters:
+    - learning_rate: base learning rate
+    - momentum: momentum factor (typically 0.9)
+    """
+    def __init__(self, learning_rate=0.01, momentum=0.9):
+        super().__init__(learning_rate)
+        self.momentum = momentum
+        self.velocity = {}
+
+    def update(self, params, grads):
+        for key in params:
+            if key not in self.velocity:
+                self.velocity[key] = np.zeros_like(params[key])
+            self.velocity[key] = self.momentum * self.velocity[key] - self.learning_rate * grads[key]
+            params[key][...] += self.velocity[key]
