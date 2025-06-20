@@ -134,4 +134,6 @@ def plot_lime_aggregated(
     plt.title(title, fontsize=13)
     plt.xlabel("Average Feature Weight")
     plt.tight_layout()
+    # save plot with title information
+    plt.savefig(f"assets/lime_explanation_stability_{title.replace(' ', '_').lower()}.png", dpi=300)
     plt.show()
