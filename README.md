@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 ```
 .
-├── assets/                      # Saved SHAP/LIME figures and result plots
+├── assets/                      # Saved SHAP/LIME figures
 ├── courselib/
 │   ├── models/                  # Manually implemented models (logistic, tree, forest)
 │   ├── explain/                 # LIME utilities
