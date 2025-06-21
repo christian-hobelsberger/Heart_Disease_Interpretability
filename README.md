@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 ```
 .
-├── assets/                      # Saved SHAP/LIME figures and result plots
+├── assets/                      # Saved SHAP/LIME figures
 ├── courselib/
 │   ├── models/                  # Manually implemented models (logistic, tree, forest)
 │   ├── explain/                 # LIME utilities
@@ -92,11 +92,3 @@ Example: Confusion matrix for Random Forest (manual):
 
 The corresponding report is not included in this repository.  
 Please contact me directly to request a copy.
-
----
-
-## License & Contributions
-
-This project is intended for academic use and reproducibility.  
-Feel free to fork or extend for your own purposes.  
-License: MIT
