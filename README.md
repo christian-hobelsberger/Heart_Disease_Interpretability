@@ -85,11 +85,3 @@ Key features identified by both LIME and SHAP:
 
 The corresponding report is not included in this repository.  
 Please contact me directly to request a copy.
-
----
-
-## License & Contributions
-
-This project is intended for academic use and reproducibility.  
-Feel free to fork or extend for your own purposes.  
-License: MIT
