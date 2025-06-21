@@ -70,6 +70,13 @@ Key features identified by both LIME and SHAP:
 - `cp`: Chest pain type
 - `ca`: Number of major vessels
 
+Example: Confusion matrix for Random Forest (manual):
+
+<p align="center">
+  <img src="assets/random_forest_confusion_matrix.png" width="300"/>
+</p>
+
+
 ---
 
 ## Interpretability Examples
