@@ -20,12 +20,13 @@ pip install -r requirements.txt
 
 ```
 .
-├── assets/                      # Saved SHAP/LIME figures
+├── assets/ # Saved SHAP/LIME figures
 ├── courselib/
-│   ├── models/                  # Manually implemented models (logistic, tree, forest)
-│   ├── explain/                 # LIME utilities
-│   └── utils/                   # Preprocessing, metrics, CV, encoding, etc.
-├── Heart_Disease_Interpretability.ipynb  # Main analysis notebook
+│ ├── models/ # Manually implemented models (logistic, tree, forest)
+│ ├── explain/ # LIME utilities
+│ └── utils/ # Preprocessing, metrics, CV, encoding, etc.
+├── data/ # Fallback datasets (used if UCI repository is unavailable)
+├── Heart_Disease_Interpretability.ipynb # Main analysis notebook
 ├── requirements.txt
 ├── README.md
 ```
@@ -57,12 +58,12 @@ Models are evaluated on a held-out test set using:
 
 ## Results
 
-| Model                  | Test Accuracy |
-|------------------------|---------------|
-| Logistic Regression    | 81.7%         |
-| Decision Tree (CART)   | 70.0%         |
-| Random Forest (manual) | 83.3%         |
-| XGBoost                | 83.3%         |
+| Model                           | Test Accuracy |
+|---------------------------------|---------------|
+| Logistic Regression (manual)    | 81.7%         |
+| Decision Tree (CART, manual)    | 70.0%         |
+| Random Forest (manual)          | 81.7%        |
+| XGBoost                         | 83.3%         |
 
 Key features identified by both LIME and SHAP:
 
